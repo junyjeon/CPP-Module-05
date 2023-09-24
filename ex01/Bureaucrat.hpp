@@ -18,7 +18,7 @@ public:
 
 	Bureaucrat(std::string const &, int grade);
 	std::string const & getName() const;
-	int getGrade() const;
+	int const & getGrade() const;
 
 	void GradeUp();
 	void GradeDown();
