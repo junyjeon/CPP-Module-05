@@ -5,6 +5,7 @@
 #include <exception>
 #include "GradeTooHighException.hpp"
 #include "GradeTooLowException.hpp"
+#include "AForm.hpp"
 
 class Bureaucrat {
 private:
@@ -22,6 +23,8 @@ public:
 
 	void GradeUp();
 	void GradeDown();
+
+	void signForm(AForm &form);
 };
 
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &bureaucrat);

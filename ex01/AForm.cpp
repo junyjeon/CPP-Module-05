@@ -18,9 +18,9 @@ AForm &AForm::operator=(const AForm &other) {
 AForm::~AForm() {}
 
 AForm::AForm(std::string const &name, int isSigned, int req_grade, int exc_grade) : name(name), isSigned(isSigned), req_grade(req_grade), exc_grade(exc_grade) {
-	if (grade < 1)
+	if (req_grade < 1 || exc_grade)
 		throw GradeTooHighException();
-	else if (150 < grade)
+	else if (150 < req_grade || 150 < exc_grade)
 		throw GradeTooLowException();
 }
 
@@ -38,6 +38,13 @@ int AForm::getReqGrade() const {
 
 int AForm::getExcGrade() const {
 	return this->exc_grade;
+}
+
+void AForm::beSigned(Bureaucrat &b){
+	if (this->req_grade <= b.getGrade())
+		this->isSigned = true;
+	else
+		throw GradeTooLowException();
 }
 
 std::ostream &operator<<(std::ostream &os, AForm const &bureaucrat) {

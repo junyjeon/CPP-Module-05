@@ -5,6 +5,7 @@
 #include <exception>
 #include "GradeTooHighException.hpp"
 #include "GradeTooLowException.hpp"
+#include "Bureaucrat.hpp"
 
 class AForm {
 private:
@@ -24,7 +25,7 @@ public:
 	int getReqGrade() const;
 	int getExcGrade() const;
 
-	beSigned() const;
+	void beSigned(Bureaucrat &);
 
 	virtual void execute() const = 0;
 };
