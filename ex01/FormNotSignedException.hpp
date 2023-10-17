@@ -1,11 +1,12 @@
 #ifndef FORMNOTSIGNEDEXCEPTION_HPP
-# define FORMNOTSIGNEDEXCEPTION_HPP
+#define FORMNOTSIGNEDEXCEPTION_HPP
 
 #include <iostream>
 
-class FormNotSignedException : public std::exception {
+class FormNotSignedException : public std::exception
+{
 public:
-    const char* what() const throw();
+    const char *what() const throw();
 };
 
 #endif
