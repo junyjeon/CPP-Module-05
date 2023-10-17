@@ -25,7 +25,7 @@ clean:
 	@$(RM) -r $(BUILD_DIR)
 
 fclean: clean
-	@$(RM) -r $(NAME)
+	@$(RM) -r $(NAME) s_shrubbery
 	@echo "${YELLOW}> Cleaning of the AForm has been done.❌${END}"
 
 re: fclean all
