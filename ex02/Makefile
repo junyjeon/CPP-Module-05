@@ -6,7 +6,7 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 BUILD_DIR	=	bulid
 
-SRC		=	main.cpp Form.cpp Bureaucrat.cpp GradeTooLowException.cpp GradeTooHighException.cpp FormNotSignedException.cpp
+SRC		=	AForm.cpp GradeTooHighException.cpp RobotomyRequestForm.cpp Bureaucrat.cpp GradeTooLowException.cpp ShrubberyCreationForm.cpp FormNotSignedException.cpp PresidentialPardonForm.cpp main.cpp
 OBJ		=	$(patsubst %.cpp, $(BUILD_DIR)/%.o, $(SRC))
 
 all:	$(NAME)

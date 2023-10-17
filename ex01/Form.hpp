@@ -22,7 +22,7 @@ public:
 	Form();
 	Form(const Form &);
 	Form &operator=(const Form &);
-	virtual ~Form();
+	~Form();
 
 	Form(std::string const &, int, int);
 	std::string const &getName() const;
