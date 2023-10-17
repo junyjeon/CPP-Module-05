@@ -1,4 +1,4 @@
-NAME		=	AMateria
+NAME		=	AForm
 
 CXX			=	c++ -g2
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -6,7 +6,7 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 BUILD_DIR	=	bulid
 
-SRC		=	main.cpp AMateria.cpp Ice.cpp Cure.cpp MateriaSource.cpp Character.cpp
+SRC		=	AForm.cpp GradeTooHighException.cpp RobotomyRequestForm.cpp Bureaucrat.cpp GradeTooLowException.cpp ShrubberyCreationForm.cpp FormNotSignedException.cpp PresidentialPardonForm.cpp main.cpp
 OBJ		=	$(patsubst %.cpp, $(BUILD_DIR)/%.o, $(SRC))
 
 all:	$(NAME)
@@ -26,7 +26,7 @@ clean:
 
 fclean: clean
 	@$(RM) -r $(NAME)
-	@echo "${YELLOW}> Cleaning of the AMateria has been done.❌${END}"
+	@echo "${YELLOW}> Cleaning of the AForm has been done.❌${END}"
 
 re: fclean all
 

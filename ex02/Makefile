@@ -1,4 +1,4 @@
-NAME		=	Form
+NAME		=	AForm
 
 CXX			=	c++ -g2
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -26,7 +26,7 @@ clean:
 
 fclean: clean
 	@$(RM) -r $(NAME)
-	@echo "${YELLOW}> Cleaning of the Form has been done.❌${END}"
+	@echo "${YELLOW}> Cleaning of the AForm has been done.❌${END}"
 
 re: fclean all
 
