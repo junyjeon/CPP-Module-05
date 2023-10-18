@@ -3,34 +3,44 @@
 
 #include <iostream>
 #include <exception>
-#include "GradeTooHighException.hpp"
-#include "GradeTooLowException.hpp"
-#include "Form.hpp"
-
-class Form;
 
 class Bureaucrat
 {
 private:
-	std::string name;
+	const std::string name;
 	int grade;
 
-public:
 	Bureaucrat();
 	Bureaucrat(const Bureaucrat &);
 	Bureaucrat &operator=(const Bureaucrat &);
 	~Bureaucrat();
 
-	Bureaucrat(std::string const &, int);
+public:
+	Bureaucrat(std::string const &, int grade);
 	std::string const &getName() const;
-	int const &getGrade() const;
+	int getGrade() const;
 
 	void GradeUp();
 	void GradeDown();
 
-	void signForm(Form &);
+	class GradeTooHighException : public std::exception
+	{
+	public:
+		const char *what() const throw()
+		{
+			return "Grade too high!";
+		}
+	};
+	class GradeTooLowException : public std::exception
+	{
+	public:
+		const char *what() const throw()
+		{
+			return "Grade too low!";
+		}
+	};
 };
 
-std::ostream &operator<<(std::ostream &, Bureaucrat const &);
+std::ostream &operator<<(std::ostream &os, Bureaucrat const &bureaucrat);
 
 #endif

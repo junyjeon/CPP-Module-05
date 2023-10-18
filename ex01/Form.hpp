@@ -3,9 +3,6 @@
 
 #include <iostream>
 #include <exception>
-#include "GradeTooHighException.hpp"
-#include "GradeTooLowException.hpp"
-#include "FormNotSignedException.hpp"
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
@@ -33,6 +30,15 @@ public:
 	void beSigned(Bureaucrat &);
 
 	void execute(Bureaucrat const &) const;
+
+	class FormNotSignedException : public std::exception
+	{
+	public:
+		const char *FormNotSignedException::what() const throw()
+		{
+			return "Grade too high!";
+		}
+	};
 };
 
 std::ostream &operator<<(std::ostream &, Form const &);

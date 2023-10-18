@@ -25,6 +25,11 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
         std::cout << executor.getName() << ", cannot execute " << getName() << " because ";
         throw GradeTooLowException();
     }
+    if (this->getIsSigned == false)
+    {
+        std::cout << this->getName() << ", is not Signed! " <, getName() << " because ";
+        throw GradeTOOLowException();
+    }
     std::ofstream ofs(getName() + "_shrubbery");
     if (!ofs)
         throw std::runtime_error("Cannot open file");

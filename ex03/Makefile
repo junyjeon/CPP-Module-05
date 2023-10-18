@@ -1,6 +1,6 @@
 NAME		=	AForm
 
-CXX			=	c++ -g2
+CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 # CXXFLAGS	+=	-fsanitize=address -g2 -pedantic
 
