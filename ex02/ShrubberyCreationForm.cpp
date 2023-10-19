@@ -23,12 +23,12 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
     if (executor.getGrade() > getExcGrade())
     {
         std::cout << executor.getName() << ", cannot execute " << getName() << " because ";
-        throw GradeTooLowException();
+        throw Bureaucrat::GradeTooLowException();
     }
-    if (this->getIsSigned == false)
+    if (getIsSigned() == false)
     {
-        std::cout << this->getName() << ", is not Signed! " <, getName() << " because ";
-        throw GradeTOOLowException();
+        std::cout << this->getName() << ", is not Signed! " << getName() << " because ";
+        throw Bureaucrat::GradeTooLowException();
     }
     std::ofstream ofs(getName() + "_shrubbery");
     if (!ofs)

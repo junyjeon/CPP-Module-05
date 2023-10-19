@@ -17,7 +17,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 
 Bureaucrat::~Bureaucrat() {}
 
-// public
+/* public */
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : name(name), grade(grade)
 {
 	if (grade < 1)

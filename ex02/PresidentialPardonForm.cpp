@@ -1,6 +1,6 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 72, 45) {}
+PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 5) {}
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other)
 {
@@ -23,7 +23,7 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const
     if (executor.getGrade() > getExcGrade())
     {
         std::cout << executor.getName() << ", cannot execute " << getName() << " because ";
-        throw GradeTooLowException();
+        throw Bureaucrat::GradeTooLowException();
     }
     std::cout << executor.getName() << " has been pardoned by Zafod Beeblebrox.\n";
 }

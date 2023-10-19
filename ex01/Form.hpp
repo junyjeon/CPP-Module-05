@@ -12,15 +12,15 @@ class Form
 private:
 	const std::string name;
 	bool isSigned;
-	int req_grade;
-	int exc_grade;
+	const int req_grade;
+	const int exc_grade;
 
-public:
 	Form();
 	Form(const Form &);
 	Form &operator=(const Form &);
-	~Form();
 
+public:
+	~Form();
 	Form(std::string const &, int, int);
 	std::string const &getName() const;
 	int getIsSigned() const;
@@ -34,7 +34,7 @@ public:
 	class FormNotSignedException : public std::exception
 	{
 	public:
-		const char *FormNotSignedException::what() const throw()
+		const char *what() const throw()
 		{
 			return "Grade too high!";
 		}

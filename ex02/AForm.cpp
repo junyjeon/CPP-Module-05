@@ -1,6 +1,6 @@
 #include "AForm.hpp"
 
-AForm::AForm() : name(""), isSigned(false), req_grade(0), exc_grade(0) {}
+AForm::AForm() : name(""), isSigned(false), req_grade(150), exc_grade(150) {}
 
 AForm::AForm(const AForm &other)
 {
@@ -52,7 +52,7 @@ void AForm::beSigned(Bureaucrat &b)
 	if (this->req_grade >= b.getGrade())
 		this->isSigned = true;
 	else
-		throw GradeTooLowException();
+		throw Bureaucrat::GradeTooLowException();
 }
 
 std::ostream &operator<<(std::ostream &os, AForm const &form)

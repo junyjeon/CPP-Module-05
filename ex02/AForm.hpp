@@ -3,9 +3,6 @@
 
 #include <iostream>
 #include <exception>
-#include "GradeTooHighException.hpp"
-#include "GradeTooLowException.hpp"
-#include "FormNotSignedException.hpp"
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
@@ -15,15 +12,15 @@ class AForm
 private:
 	const std::string name;
 	bool isSigned;
-	int req_grade;
-	int exc_grade;
+	const int req_grade;
+	const int exc_grade;
 
-public:
 	AForm();
 	AForm(const AForm &);
 	AForm &operator=(const AForm &);
-	virtual ~AForm();
 
+public:
+	~AForm();
 	AForm(std::string const &, int, int);
 	std::string const &getName() const;
 	int getIsSigned() const;
@@ -33,6 +30,15 @@ public:
 	void beSigned(Bureaucrat &);
 
 	virtual void execute(Bureaucrat const &) const = 0;
+
+	class FormNotSignedException : public std::exception
+	{
+	public:
+		const char *FormNotSignedException::what() const throw()
+		{
+			return "Grade too high!";
+		}
+	};
 };
 
 std::ostream &operator<<(std::ostream &, AForm const &);
