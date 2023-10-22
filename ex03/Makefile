@@ -1,4 +1,4 @@
-NAME		=	AForm
+NAME		=	Intern
 
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
@@ -6,7 +6,7 @@ CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 BUILD_DIR	=	bulid
 
-SRC		=	AForm.cpp Bureaucrat.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp main.cpp
+SRC		=	AForm.cpp Bureaucrat.cpp Intern.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp main.cpp
 OBJ		=	$(patsubst %.cpp, $(BUILD_DIR)/%.o, $(SRC))
 
 all:	$(NAME)
@@ -26,7 +26,7 @@ clean:
 
 fclean: clean
 	@$(RM) -r $(NAME) s_shrubbery
-	@echo "${YELLOW}> Cleaning of the AForm has been done.❌${END}"
+	@echo "${YELLOW}> Cleaning of the Intern has been done.❌${END}"
 
 re: fclean all
 

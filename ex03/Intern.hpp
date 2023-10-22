@@ -1,4 +1,3 @@
-
 #ifndef INTERN_HPP
 #define INTERN_HPP
 
@@ -15,7 +14,7 @@ public:
     Intern &operator=(const Intern &);
     ~Intern();
 
-    Form *makeForm(const std::string &, const std::string &);
+    AForm *makeForm(const std::string &, const std::string &);
 };
 
 #endif

@@ -1,38 +1,49 @@
 #include "Intern.hpp"
 
-Form *Intern::makeForm(const std::string &name, const std::string &target)
+Intern::Intern() {}
+
+Intern::Intern(const Intern &other)
 {
-    Form *form = nullptr;
+    *this = other;
+}
+
+Intern &Intern::operator=(const Intern &other)
+{
+    (void)other;
+    return *this;
+}
+
+Intern::~Intern() {}
+
+AForm *Intern::makeForm(const std::string &name, const std::string &target)
+{
     enum FormName
     {
         Shrubbery,
         Robot,
-        president,
+        President,
         Unknown
     };
 
     FormName val =
         name == "shrubbery creation"    ? Shrubbery
         : name == "robotomy request"    ? Robot
-        : name == "presidential pardon" ? president
+        : name == "presidential pardon" ? President
                                         : Unknown;
 
     switch (val)
     {
     case Shrubbery:
         std::cout << "Intern maked ShrubberyCreationForm!" << std::endl;
-        return ShrubberyCreationForm::ShrubberyCreationForm();
+        return new ShrubberyCreationForm(target);
     case Robot:
         std::cout << "Intern maked RobotomyRequest Form!" << std::endl;
-        return RobotomyRequestForm::RobotomyRequestForm();
-        break;
-    case president:
+        return new RobotomyRequestForm(target);
+    case President:
         std::cout << "Intern maked PresidentialPardon Form!" << std::endl;
-        return PresidentialPardonForm();
+        return new PresidentialPardonForm(target);
     default:
         std::cout << "Unknown Form name!";
+        return nullptr;
     }
 }
-
-// vscode에 gpt= cursor, copliot
-// form만들고,  24번째줄 수정학;

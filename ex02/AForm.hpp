@@ -20,7 +20,7 @@ private:
 
 public:
 	AForm();
-	~AForm();
+	virtual ~AForm();
 
 	AForm(std::string const &, int, int);
 	std::string const &getName() const;
