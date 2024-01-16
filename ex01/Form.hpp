@@ -21,15 +21,15 @@ private:
 
 public:
 	~Form();
+
 	Form(std::string const &, int, int);
+
 	std::string const &getName() const;
 	int getIsSigned() const;
 	int getReqGrade() const;
 	int getExcGrade() const;
 
 	void beSigned(Bureaucrat &);
-
-	void execute(Bureaucrat const &) const;
 
 	class FormNotSignedException : public std::exception
 	{

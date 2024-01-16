@@ -17,11 +17,14 @@ private:
 public:
 	~Bureaucrat();
 	Bureaucrat(std::string const &, int);
+
 	std::string const &getName() const;
 	int getGrade() const;
 
 	void GradeUp();
 	void GradeDown();
+
+	void signForm(bool, std::string const &) const;
 
 	class GradeTooHighException : public std::exception
 	{

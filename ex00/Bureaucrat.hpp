@@ -17,6 +17,7 @@ private:
 public:
 	~Bureaucrat();
 	Bureaucrat(std::string const &, int);
+	
 	std::string const &getName() const;
 	int getGrade() const;
 

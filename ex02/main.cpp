@@ -6,10 +6,11 @@
 
 int main(void)
 {
+    std::cout << "--01--" << std::endl;
     try
     {
-        Bureaucrat a("a", 135);
-        Bureaucrat a2("a2", 146);
+        Bureaucrat a("a", 137);
+        Bureaucrat a2("a2", 145);
         std::cout << a << std::endl;
         std::cout << a2 << std::endl;
         std::cout << std::endl;
@@ -18,11 +19,11 @@ int main(void)
         std::cout << s << std::endl;
         std::cout << std::endl;
 
-        s.beSigned(a); // grade throw
+        s.beSigned(a);
         s.beSigned(a2);
-        std::cout << std::endl;
+        std::cout << s << std::endl;
 
-        s.execute(a);
+        // s.execute(a);
         s.execute(a2);
         std::cout << std::endl;
     }
@@ -31,12 +32,12 @@ int main(void)
         std::cout << e.what() << std::endl;
     }
     std::cout << std::endl;
-    std::cout << std::endl;
-    //----------------------------------------------1
+
+    std::cout << "--02--" << std::endl;
     try
     {
-        Bureaucrat b("b", 44);
-        Bureaucrat b2("b2", 73);
+        Bureaucrat b("b", 45);
+        Bureaucrat b2("b2", 72);
         RobotomyRequestForm r("r"); // g72 e45
         std::cout << std::endl;
 
@@ -47,23 +48,23 @@ int main(void)
 
         r.beSigned(b);
         r.beSigned(b2);
+        std::cout << r << std::endl;
         std::cout << std::endl;
 
-        r.execute(b);
+        // r.execute(b);
         r.execute(b2);
-        std::cout << std::endl;
     }
     catch (std::exception &e)
     {
         std::cout << e.what() << std::endl;
     }
     std::cout << std::endl;
-    std::cout << std::endl;
-    //----------------------------------------------2
+
+    std::cout << "--03--" << std::endl;
     try
     {
-        Bureaucrat c("c", 4);
-        Bureaucrat c2("c2", 26);
+        Bureaucrat c("c", 5);
+        Bureaucrat c2("c2", 25);
         PresidentialPardonForm p("p"); // g25 e5
         std::cout << std::endl;
 
@@ -74,16 +75,14 @@ int main(void)
 
         p.beSigned(c);
         p.beSigned(c2);
-        std::cout << std::endl;
+        std::cout << p << std::endl;
 
-        p.execute(c);
+        // p.execute(c);
         p.execute(c2);
-        std::cout << std::endl;
     }
     catch (std::exception &e)
     {
         std::cout << e.what() << std::endl;
     }
-    //----------------------------------------------3
     return 0;
 }

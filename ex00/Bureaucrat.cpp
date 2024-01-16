@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 
+/* private methods */
 Bureaucrat::Bureaucrat() : name(""), grade(150) {}
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other)
@@ -15,9 +16,9 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 	return *this;
 }
 
+/* private methods */
 Bureaucrat::~Bureaucrat() {}
 
-/* public */
 Bureaucrat::Bureaucrat(std::string const &name, int grade) : name(name), grade(grade)
 {
 	if (grade < 1)
@@ -26,6 +27,7 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade) : name(name), grade(g
 		throw GradeTooLowException();
 }
 
+/* getters */
 std::string const &Bureaucrat::getName() const
 {
 	return this->name;
@@ -36,6 +38,7 @@ int Bureaucrat::getGrade() const
 	return this->grade;
 }
 
+/* grade */
 void Bureaucrat::GradeUp()
 {
 	if (this->grade <= 1)

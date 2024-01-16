@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    std::cout << "--01--" << std::endl;
     try
     {
         Bureaucrat a("Jun", 1);
@@ -17,15 +18,15 @@ int main(void)
     {
         std::cout << e.what() << std::endl;
     }
-
     std::cout << std::endl;
 
+    std::cout << "--02--" << std::endl;
     try
     {
         Bureaucrat b("Hye", 150);
         std::cout << b << std::endl;
 
-        Form f2("Form2", 1, 1);
+        Form f2("Form2", 149, 149);
         std::cout << f2 << std::endl;
         f2.beSigned(b);
         std::cout << f2 << std::endl;
@@ -34,41 +35,7 @@ int main(void)
     {
         std::cout << e.what() << std::endl;
     }
-
     std::cout << std::endl;
 
-    try
-    {
-        Bureaucrat c("Invalid", 0);
-        std::cout << c << std::endl;
-
-        Form f3("Form3", 1, 1);
-        std::cout << f3 << std::endl;
-        f3.beSigned(c);
-        std::cout << f3 << std::endl;
-    }
-    catch (std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-
-    std::cout << std::endl;
-
-    try
-    {
-        Bureaucrat d("Invalid", 151);
-        std::cout << d << std::endl;
-
-        Form f4("Form4", 1, 1);
-        std::cout << f4 << std::endl;
-        f4.beSigned(d);
-        std::cout << f4 << std::endl;
-    }
-    catch (std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-
-    std::cout << std::endl;
     return 0;
 }
