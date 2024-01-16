@@ -34,16 +34,16 @@ AForm *Intern::makeForm(const std::string &name, const std::string &target)
     switch (val)
     {
     case Shrubbery:
-        std::cout << "Intern maked ShrubberyCreationForm!" << std::endl;
+        std::cout << "Intern creates ShrubberyCreationForm!" << std::endl;
         return new ShrubberyCreationForm(target);
     case Robot:
-        std::cout << "Intern maked RobotomyRequest Form!" << std::endl;
+        std::cout << "Intern creates RobotomyRequest Form!" << std::endl;
         return new RobotomyRequestForm(target);
     case President:
-        std::cout << "Intern maked PresidentialPardon Form!" << std::endl;
+        std::cout << "Intern creates PresidentialPardon Form!" << std::endl;
         return new PresidentialPardonForm(target);
     default:
-        std::cout << "Unknown Form name!";
-        return nullptr;
+        throw Intern::UnknownFormException();
+        return 0;
     }
 }

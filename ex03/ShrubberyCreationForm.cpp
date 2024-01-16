@@ -2,7 +2,7 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137) {}
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : AForm(other)
 {
     *this = other;
 }
@@ -30,7 +30,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
         std::cout << this->getName() << ", is not Signed! " << getName() << " because ";
         throw Bureaucrat::GradeTooLowException();
     }
-    std::ofstream ofs(getName() + "_shrubbery");
+    std::ofstream ofs((getName() + "_shrubbery").c_str());
     if (!ofs)
         throw std::runtime_error("Cannot open file");
     ofs << "                       O\n"

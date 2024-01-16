@@ -15,6 +15,14 @@ public:
     ~Intern();
 
     AForm *makeForm(const std::string &, const std::string &);
+    class UnknownFormException : public std::exception
+    {
+    public:
+		const char *what() const throw()
+		{
+			return "Unknown form!";
+		}
+    };
 };
 
 #endif

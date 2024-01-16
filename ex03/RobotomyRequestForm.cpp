@@ -2,7 +2,7 @@
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45) {}
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : AForm(other)
 {
     *this = other;
 }
