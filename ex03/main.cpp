@@ -26,9 +26,9 @@ int main()
         delete form3;
 
     //if문 사용할 필요 없이 try-catch로 UnknownFormException이 잡힌다.
-    AForm *form4 = intern.makeForm("nonexistent form", "target");
-    if (form4)
-        delete form4;
+    // AForm *form4 = intern.makeForm("nonexistent form", "target");
+    // if (form4)
+    //     delete form4;
 
     return 0;
 }
