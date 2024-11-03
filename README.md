@@ -1,7 +1,7 @@
 # CPP Module 05
 
 <div align="center">
-  <img src="assets/17_CPP-Module-05.png" alt="Exception Handling & Bureaucracy" width="800"/>
+  <img src="assets/17_cpp_module_05_review.jpg" alt="Exception Handling & Bureaucracy" width="800"/>
   
   [![42 Score](https://img.shields.io/badge/Score-100%2F100-success?style=for-the-badge&logo=42)](https://github.com/junyjeon/CPP-Module-05)
   [![C++](https://img.shields.io/badge/C++-98-blue.svg?style=for-the-badge&logo=c%2B%2B)](https://github.com/junyjeon/CPP-Module-05)
