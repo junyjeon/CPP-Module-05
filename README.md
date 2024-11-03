@@ -271,7 +271,6 @@ PresidentialPardonForm
 - [ ] 코드 스타일 점검
 
 ## 📚 참고자료
-> 과제 구현에 도움이 되는 자료들입니다.
 
 ### C++ 관련
 - [C++ Reference](https://en.cppreference.com/)
