@@ -1,10 +1,20 @@
-# CPP Module 05
-
 <div align="center">
+  <h1>💻 CPP Module 05</h1>
+  <p>예외 처리 | 관료제 시뮬레이션</p>
+
   <img src="assets/17_cpp_module_05_review.jpg" alt="Exception Handling & Bureaucracy" width="800"/>
   
-  [![42 Score](https://img.shields.io/badge/Score-100%2F100-success?style=for-the-badge&logo=42)](https://github.com/junyjeon/CPP-Module-05)
-  [![C++](https://img.shields.io/badge/C++-98-blue.svg?style=for-the-badge&logo=c%2B%2B)](https://github.com/junyjeon/CPP-Module-05)
+  <div>
+    <img src="https://img.shields.io/badge/Score-100%2F100-success?style=flat-square&logo=42" alt="42 Score"/>
+    <img src="https://img.shields.io/badge/Language-C++98-00599C?style=flat-square&logo=c%2B%2B" alt="Language"/>
+  </div>
+
+  ### 학습 내용
+  - try-catch 예외 처리 메커니즘
+  - 사용자 정의 예외 클래스 구현
+  - 예외 클래스 상속 구조
+  - 스택 풀기(Stack Unwinding)
+  - RAII 패턴과 예외 안전성
 </div>
 
 ## 🚀 Quick Start
